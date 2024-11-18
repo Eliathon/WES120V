@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E3F2FD;
+    color: #1A237E;
+}
+
+nav {
+    background-color: #0D47A1;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    display: inline;
+    justify-content: center;
+}
+
+nav a {
+    color: #E3F2FD;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1976D2;
+    padding: 2rem;
+}
+
+.hero h1 {
+    color: #E3F2FD;
+}
+
+.hero p {
+    color: #E3F2FD;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #1976D2;
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #E3F2FD;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #BBDEFB;
+}
+
+.content-button {
+    width: 80%;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    background-color: #1E88E5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.content-button:hover {
+    background-color: #1565C0;
+}
+
+footer {
+    background-color: #1A237E;
+    color: #E3F2FD;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.reading-content {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reading-content h1 {
+    color: #0D47A1;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.reading-content p {
+    color: #1A237E;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
