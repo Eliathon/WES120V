@@ -42,6 +42,7 @@ body {
   background-image: url("../assets/bilde_1.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: white;
   padding: 6rem 1rem;
   text-align: center;

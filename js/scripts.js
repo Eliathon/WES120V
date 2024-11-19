@@ -1,10 +1,10 @@
 // Funksjon for å sette tema
 function setTheme(theme) {
-    if (theme === 'star-wars') {
-        document.body.classList.add('star-wars');
-    } else {
-        document.body.classList.remove('star-wars');
-    }
+  if (theme === "star-wars") {
+    document.body.classList.add("star-wars");
+  } else {
+    document.body.classList.remove("star-wars");
+  }
 }
 
 // Funksjon for å oppdatere HTML-forhåndsvisning
@@ -54,4 +54,13 @@ document.getElementById('reset-quiz').addEventListener('click', function () {
 
     // Rull opp til toppen av siden (valgfritt)
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Parallax-effekt
+window.addEventListener("scroll", function () {
+  const parallax = document.querySelector(".hero");
+  let scrollPosition = window.pageYOffset;
+
+  // Juster bakgrunnsposisjon
+  parallax.style.backgroundPositionY = scrollPosition * 0.5 + "px";
 });

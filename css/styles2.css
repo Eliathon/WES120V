@@ -1,61 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #E3F2FD;
-    color: #1A237E;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e3f2fd;
+  color: #1a237e;
 }
 
 nav {
-    background-color: #0D47A1;
-    padding: 3rem 4rem;
+  background-color: #0d47a1;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav li {
-    display: inline;
-    justify-content: center;
+  display: inline;
+  justify-content: center;
 }
 
 nav a {
-    color: #E3F2FD;
-    text-decoration: none;
+  color: #e3f2fd;
+  text-decoration: none;
+  justify-content: center;
 }
 
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #1976D2;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1976d2;
+  padding: 2rem;
 }
 
-.hero h1,
+.hero h1 {
+  color: #e3f2fd;
+}
+
 .hero p {
-    color: #E3F2FD;
+  color: #e3f2fd;
 }
 
 .text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
-    background-color: #1976D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  background-color: #1976d2;
 }
 
 .text-container h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #E3F2FD;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e3f2fd;
 }
 
 .content-container {
@@ -66,56 +71,61 @@ nav a {
     background-color: #BBDEFB;
     border-radius: 0.5rem;
     flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #bbdefb;
 }
 
 .content-button {
-    width: 80%;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
-    background-color: #1E88E5;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  width: 80%;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  background-color: #1e88e5;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .content-button:hover {
-    background-color: #1565C0;
+  background-color: #1565c0;
 }
 
 footer {
-    background-color: #1A237E;
-    color: #E3F2FD;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #1a237e;
+  color: #e3f2fd;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .reading-content {
-    background-color: white;
-    padding: 3rem;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 3rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .reading-content h1 {
-    color: #0D47A1;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  color: #0d47a1;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .reading-content p {
-    color: #1A237E;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+  color: #1a237e;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .main-container {
@@ -211,4 +221,43 @@ footer {
 .reset-quiz:active {
     background-color: #880E4F; 
     transform: translateY(1px); 
+}
+.next-page-container {
+  text-align: right;
+  padding: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #003d80;
+}
+
+.source {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.source a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.source a:hover {
+  text-decoration: underline;
+}
+
+.source strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
 }
