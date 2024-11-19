@@ -8,8 +8,7 @@ body {
 
 nav {
     background-color: #0D47A1;
-    padding: 1rem 2rem;
-    text-align: center;
+    padding: 3rem 4rem;
 }
 
 nav ul {
@@ -29,7 +28,6 @@ nav li {
 nav a {
     color: #E3F2FD;
     text-decoration: none;
-    justify-content: center;
 }
 
 .hero {
@@ -41,10 +39,7 @@ nav a {
     padding: 2rem;
 }
 
-.hero h1 {
-    color: #E3F2FD;
-}
-
+.hero h1,
 .hero p {
     color: #E3F2FD;
 }
@@ -69,6 +64,8 @@ nav a {
     align-items: center;
     padding: 2rem;
     background-color: #BBDEFB;
+    border-radius: 0.5rem;
+    flex: 3;
 }
 
 .content-button {
@@ -121,3 +118,97 @@ footer {
     font-size: 1.1rem;
 }
 
+.main-container {
+    display: flex;
+    gap: 1rem;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+}
+
+.side-nav {
+    flex: 1;
+    text-align: left;
+    padding: 1rem;
+    background-color: transparent;
+    max-width: 250px;
+    position: sticky;
+    top: 1rem;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin-bottom: 1rem;
+}
+
+.side-nav a {
+    color: #0D47A1;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.side-nav a:hover {
+    text-decoration: underline;
+}
+
+.side-nav details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.side-nav ul ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Stil for quiz-knappen */
+.submit-quiz {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0D47A1; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-quiz:hover {
+    background-color: #1565C0; 
+    transform: translateY(-3px); 
+}
+
+.submit-quiz:active {
+    background-color: #0B3954; 
+    transform: translateY(1px); 
+}
+
+/* Stil for tilbakestill-knappen */
+.reset-quiz {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #B71C1C; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.reset-quiz:hover {
+    background-color: #D32F2F; 
+    transform: translateY(-3px); 
+}
+.reset-quiz:active {
+    background-color: #880E4F; 
+    transform: translateY(1px); 
+}

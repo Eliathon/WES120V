@@ -3,134 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hva er systemutvikling</title>
+    <title>Systemutvikling</title>
     <link rel="stylesheet" href="../css/styles2.css" />
   </head>
   <body>
+    <!-- Navigasjons menyen på toppen-->
     <nav class="navbar">
-      <h1 class="logo">Webutvikling</h1>
       <ul class="nav-menu">
         <li><a href="../index.html">Hjem</a></li>
-        <li><a href="fase1.html">Fase 1</a></li>
-        <li><a href="kilder.html">Kilder</a></li>
-        <li><a href="systemutvikling.html">Systemutvikling</a></li>
+        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektarbeid og prosjektledelse</a></li>
+        <li><a href="/html/webutvikling.html">Webutvikling</a></li>
+        <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
+        <li><a href="/html/kilder.html">Kilder</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
       </ul>
     </nav>
 
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Hva er systemutvikling?</h1>
-        <p>
-          Utforsk de grunnleggende konseptene og komponentene i systemutvikling
-          og informasjonssystemer.
-        </p>
-      </div>
-    </header>
+    <!-- Hovedinnholdet -->
+    <div class="main-container">
+      <main class="content-container">
+        <section class="reading-content">
+          <h2>Hva er informasjonssystemer?</h2>
+          <p>
+            Et informasjonssystem er et sett med sammenhengende komponenter som
+            har som oppgave å samle inn data, behandle dataene, og presentere
+            resultatet. Informasjonssystemer er bygd opp av fem grunnleggende
+            komponenter:
+          </p>
+          <ul>
+            <li><strong>Maskinvare (hardware):</strong> De fysiske maskinene.</li>
+            <li>
+              <strong>Programvare (software):</strong> Programmer som kjører på
+              maskinvaren.
+            </li>
+            <li>
+              <strong>Data:</strong> Informasjon som blir brukt av maskinvare og
+              programvare.
+            </li>
+            <li>
+              <strong>Mennesker:</strong> Brukere av maskinvare og programvare.
+            </li>
+            <li>
+              <strong>Prosedyrer:</strong> Retningslinjer for hvordan systemet
+              skal brukes.
+            </li>
+          </ul>
+          <p>
+            Noen eksempler på informasjonssystemer er sosiale medier som Facebook
+            eller X (Twitter), SAP ERP-systemer eller kunderegistre for små
+            bedrifter. (Zwass, 2024)
+          </p>
 
-    <main class="content-container">
-      <section class="reading-content">
-        <h2>Hva er informasjonssystemer?</h2>
-        <p>
-          Et informasjonssystem er et sett med sammenhengende komponenter som
-          har som oppgave å samle inn data, behandle dataene, og presentere
-          resultatet. Informasjonssystemer er bygd opp av fem grunnleggende
-          komponenter:
-        </p>
+          <h2>Typer informasjonssystemer</h2>
+          <p>Informasjonssystemer kan deles inn i to hovedtyper:</p>
+          <ul>
+            <li>
+              <strong>COTS (Commercial of-the-shelf):</strong> Programvare laget
+              og vedlikeholdt av en tredjepart som kan kjøpes eller leies.
+              Brukeren er ansvarlig for å installere og konfigurere systemet.
+              (Baecke, 2020)
+            </li>
+            <li>
+              <strong>SaaS (Software as a Service):</strong> Programvare levert
+              som en tjeneste der kunden betaler for bruken. En tredjepart
+              håndterer administrasjon og vedlikehold. (Baecke, 2020)
+            </li>
+          </ul>
+
+          <h2>Hva er systemutvikling?</h2>
+          <p>
+            Systemutvikling innebærer å lage, forbedre og vedlikeholde
+            informasjonssystemer. Disse systemene kan variere fra enkle
+            applikasjoner for IoT-enheter til komplekse IT-infrastrukturer. Målet
+            er å sikre pålitelighet, effektivitet og brukervennlighet.
+          </p>
+          <p>
+            Metodene for systemutvikling inkluderer strukturerte prosesser,
+            teknikker og verktøy som brukes i planlegging, design, implementasjon,
+            testing og vedlikehold. (Dingsøyr, 2024)
+          </p>
+        </section>
+      </main>
+
+      <!-- Navigasjons menyen til høyre -->
+      <aside class="side-nav">
         <ul>
-          <li><strong>Maskinvare (hardware):</strong> De fysiske maskinene.</li>
+          <li><a href="../index.html">Hjem</a></li>
           <li>
-            <strong>Programvare (software):</strong> Programmer som kjører på
-            maskinvaren.
+            <details>
+              <summary>Prosjektarbeid og prosjektledelse</summary>
+              <ul>
+                <li><a href="../html/prosjektledelse_og_prosjektarbeid.html">Introduksjon</a></li>
+              </ul>
+            </details>
           </li>
           <li>
-            <strong>Data:</strong> Informasjon som blir brukt av maskinvare og
-            programvare.
+            <details open="">
+              <summary>Systemutvikling</summary>
+              <ul>
+                <li><a href="../html/systemutvikling.html">Introduksjon</a></li>
+                <li><a href="../html/agile_metoder.html">Agile metoder</a></li>
+                <li><a href="../html/tradisjonelle_metoder.html">Tradisjonelle metoder</a></li>
+              </ul>
+            </details>
           </li>
           <li>
-            <strong>Mennesker:</strong> Brukere av maskinvare og programvare.
+            <details open="">
+              <summary>Webutvikling</summary>
+              <ul>
+                <li><a href="../html/webutvikling.html">Introduksjon</a></li>
+                <li><a href="../html/fase1.html">Fase 1: Analysere og forstå</a></li>
+                <li><a href="../html/fase2.html">Fase 2: Designe og utforske</a></li>
+                <li><a href="../html/fase3.html">Fase 3: Implementere</a></li>
+              </ul>
+            </details>
           </li>
-          <li>
-            <strong>Prosedyrer:</strong> Retningslinjer for hvordan systemet
-            skal brukes.
-          </li>
+          <li><a href="../html/kilder.html"><b>Kilder</b></a></li>
         </ul>
-        <p>
-          Noen eksempler på informasjonssystemer er sosiale medier som Facebook
-          eller X (Twitter), SAP ERP-systemer eller kunderegistre for små
-          bedrifter. (Zwass, 2024)
-        </p>
+      </aside>
+    </div>
 
-        <h2>Typer informasjonssystemer</h2>
-        <p>Informasjonssystemer kan deles inn i to hovedtyper:</p>
-        <ul>
-          <li>
-            <strong>COTS (Commercial of-the-shelf):</strong> Programvare laget
-            og vedlikeholdt av en tredjepart som kan kjøpes eller leies.
-            Brukeren er ansvarlig for å installere og konfigurere systemet.
-            (Baecke, 2020)
-          </li>
-          <li>
-            <strong>SaaS (Software as a Service):</strong> Programvare levert
-            som en tjeneste der kunden betaler for bruken. En tredjepart
-            håndterer administrasjon og vedlikehold. (Baecke, 2020)
-          </li>
-        </ul>
-
-        <h2>Hva er systemutvikling?</h2>
-        <p>
-          Systemutvikling innebærer å lage, forbedre og vedlikeholde
-          informasjonssystemer. Disse systemene kan variere fra enkle
-          applikasjoner for IoT-enheter til komplekse IT-infrastrukturer. Målet
-          er å sikre pålitelighet, effektivitet og brukervennlighet.
-        </p>
-        <p>
-          Metodene for systemutvikling inkluderer strukturerte prosesser,
-          teknikker og verktøy som brukes i planlegging, design, implementasjon,
-          testing og vedlikehold. (Dingsøyr, 2024)
-        </p>
-      </section>
-
-      <section class="reading-content">
-        <h2>Referanser</h2>
-        <ul>
-          <li>
-            Baecke, M. (2020, October 5). A Cloud Architects Perspective on COTS
-            vs. SaaS. Hentet fra Vmware:
-            <a
-              href="https://blogs.vmware.com/management/2020/10/an-cloud-architects-perspective-on-cots-vs-saas.html"
-              target="_blank"
-              >https://blogs.vmware.com/management/2020/10/an-cloud-architects-perspective-on-cots-vs-saas.html</a
-            >
-          </li>
-          <li>
-            Dingsøyr, T. (2024, Februar 20). Systemutvikling. Hentet fra Store
-            Norske Leksikon:
-            <a href="https://snl.no/systemutvikling" target="_blank"
-              >https://snl.no/systemutvikling</a
-            >
-          </li>
-          <li>
-            Kolade, C. (2022, September 27). What is Information Systems?
-            Definition for Beginners. Hentet fra
-            <a
-              href="https://www.freecodecamp.org/news/what-is-information-systems-definition-for-beginners/"
-              target="_blank"
-              >https://www.freecodecamp.org/news/what-is-information-systems-definition-for-beginners/</a
-            >
-          </li>
-          <li>
-            Zwass, V. (2024, November 8). Information system. Hentet fra
-            Britannica:
-            <a
-              href="https://www.britannica.com/topic/information-system"
-              target="_blank"
-              >https://www.britannica.com/topic/information-system</a
-            >
-          </li>
-        </ul>
-      </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
       <p>&copy; 2024. Gruppe 13. Alle rettigheter forbeholdt.</p>
     </footer>

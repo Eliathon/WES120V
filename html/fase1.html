@@ -7,28 +7,23 @@
     <link rel="stylesheet" href="../css/styles2.css" />
   </head>
   <body>
+    <!-- Navigasjons menyen på toppen-->
     <nav class="navbar">
-      <h1 class="logo">Webutvikling</h1>
       <ul class="nav-menu">
         <li><a href="../index.html">Hjem</a></li>
-        <li><a href="#">Om Fase 1</a></li>
-        <li><a href="#">Kilder</a></li>
+        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektarbeid og prosjektledelse</a></li>
+        <li><a href="/html/webutvikling.html">Webutvikling</a></li>
+        <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
+        <li><a href="/html/kilder.html">Kilder</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
       </ul>
     </nav>
 
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Fase 1</h1>
-        <p>
-          Fase 1 i utviklingsprosessen er analyse/forstå-delen, hvor vi
-          fokuserer på problemforståelse og brukerbehov.
-        </p>
-      </div>
-    </header>
-
-    <main class="content-container">
-      <section class="reading-content">
-        <h2>Fase 1</h2>
+    <!-- Hovedinnholdet -->
+    <div class="main-container">
+      <main class="content-container">
+        <section class="reading-content">
+          <h2>Fase 1</h2>
         <p>
           Fase 1 i utviklingsprosessen er analyse/forstå-delen. I denne delen
           skal vi forstå hva slags problem det er vi prøver å løse og for hvem
@@ -103,8 +98,47 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024. Gruppe 13.</p>
-    </footer>
-  </body>
+<!-- Navigasjons menyen til høyre-->
+    <aside class="side-nav">
+      <ul>
+        <li><a href="../index.html">Hjem</a></li>
+        <li>
+          <details>
+            <summary>Prosjektarbeid og prosjektledelse</summary>
+            <ul>
+              <li><a href="../html/prosjektledelse_og_prosjektarbeid.html">Introduksjon</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open="">
+            <summary>Systemutvikling</summary>
+            <ul>
+              <li><a href="../html/systemutvikling.html">Introduksjon</a></li>
+              <li><a href="../html/agile_metoder.html">Agile metoder</a></li>
+              <li><a href="../html/tradisjonelle_metoder.html">Tradisjonelle metoder</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open="">
+            <summary>Webutvikling</summary>
+            <ul>
+              <li><a href="../html/webutvikling.html">Introduksjon</a></li>
+              <li><a href="../html/fase1.html">Fase 1: Analysere og forstå</a></li>
+              <li><a href="../html/fase2.html">Fase 2: Designe og utforske</a></li>
+              <li><a href="../html/fase3.html">Fase 3: Implementere</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="../html/kilder.html"><b>Kilder</b></a></li>
+      </ul>
+    </aside>
+  </div>
+
+<!--Footer en-->
+  <footer>
+    <p>&copy; 2024. Gruppe 13.</p>
+  </footer>
+</body>
 </html>
