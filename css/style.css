@@ -532,11 +532,6 @@ body.star-wars {
   }
 }
 
-.highlight {
-  background-color: yellow;
-  transition: background-color 2s ease; /* Fargen falmer etter 2 sekunder */
-}
-
 
 img {
   display: block;
