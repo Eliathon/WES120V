@@ -99,3 +99,24 @@ window.addEventListener("scroll", function () {
   // Juster bakgrunnsposisjon
   parallax.style.backgroundPositionY = scrollPosition * 0.5 + "px";
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Hent hash fra URL
+  const hash = window.location.hash.substring(1); // Fjerner #
+  
+  if (hash) {
+    const targetElement = document.getElementById(hash);
+    if (targetElement) {
+      // Legg til highlight-stil
+      targetElement.style.backgroundColor = "#f0f8ff";
+      targetElement.style.border = "2px solid #1e88e5";
+
+      // Fjern highlight etter 4 sekunder
+      setTimeout(() => {
+        targetElement.style.backgroundColor = "";
+        targetElement.style.border = "";
+      }, 4000);
+    }
+  }
+});

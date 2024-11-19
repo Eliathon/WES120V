@@ -531,3 +531,22 @@ body.star-wars {
     opacity: 0;
   }
 }
+
+/* til hightlite tekst på kilder -- funker ikke */
+.highlight-link {
+  color: #1e88e5;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.highlight-link:hover {
+  color: #0056b3;
+}
+
+img {
+  display: block;
+  margin: 20px auto; /* Sentraliserer bildet */
+  max-width: 100%; /* Sikrer at bildet ikke overskrider bredden på containeren */
+  height: auto; /* Bevarer bildeforholdet */
+  border-radius: 8px; /* Runde hjørner */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Skygge rundt bildet */
+}
