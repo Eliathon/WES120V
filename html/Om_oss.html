@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Om oss</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/scripts.js"></script>
   </head>
   <body>
     <!-- Navigasjons menyen på toppen -->
@@ -23,12 +24,27 @@
         <li><a href="/html/kilder.html">Kilder</a></li>
         <li><a href="quiz.html">Quiz</a></li>
       </ul>
+      <div class="theme-buttons">
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
+      </div>
     </nav>
 
     <!-- Hovedinnholdet -->
     <div class="main-container">
       <main class="content-container">
         <section class="reading-content">
+          <div class="crawl">
           <h2>Om oss</h2>
           <p>
             Vi er to 3. klasse studenter ved USN, som tar faget Web og

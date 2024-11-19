@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web og systemutvikling</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/scripts.js"></script>
   </head>
   <body>
     <nav class="navbar">
@@ -23,12 +24,18 @@
         <li><a href="/html/quiz.html">Quiz</a></li>
       </ul>
       <div class="theme-buttons">
-        <button onclick="setTheme('normal')" class="theme-button">
-          Normal
-        </button>
-        <button onclick="setTheme('star-wars')" class="theme-button">
-          Star Wars
-        </button>
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
       </div>
     </nav>
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fase 1</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/scripts.js"></script>
   </head>
   <body>
     <!-- Navigasjons menyen på toppen-->
@@ -23,12 +24,27 @@
         <li><a href="/html/kilder.html">Kilder</a></li>
         <li><a href="quiz.html">Quiz</a></li>
       </ul>
+      <div class="theme-buttons">
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
+      </div>
     </nav>
 
     <!-- Hovedinnholdet -->
     <div class="main-container">
       <main class="content-container">
         <section class="reading-content">
+          <div class="crawl">
           <h2>Fase 1</h2>
           <img src="../assets/Intervju.jpg" alt="Illustrasjon av Fase 1" class="fase1-bilde" />
           <p>
@@ -49,7 +65,7 @@
             spørreundersøkelser, kulturelle prober, miljøanalyse og rollespill,
             for å prøve å skape en helhetlig forståelse av oppdraget og målet.
             Man har som formål å prøve å bli kjent med brukerne og deres
-            tilbakemeldinger på produktet. <a href="/html/kilder.html">(Sandnes, 2018, s. 218 - 219)</a>
+            tilbakemeldinger på produktet. <a href="/html/kilder.html#sandnes">(Sandnes, 2018, s. 218 - 219)</a>
 
           <h3>Intervjuer</h3>
           <p>
@@ -163,7 +179,7 @@
         </ul>
       </aside>
     </div>
-    <script src="/js/scripts.js"></script>
+
     <!--Footer en-->
     <footer>
       <p>&copy; 2024. Gruppe 13.</p>

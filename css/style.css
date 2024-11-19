@@ -532,21 +532,83 @@ body.star-wars {
   }
 }
 
-/* til hightlite tekst på kilder -- funker ikke */
-.highlight-link {
-  color: #1e88e5;
-  text-decoration: underline;
-  transition: color 0.3s ease;
+.highlight {
+  background-color: yellow;
+  transition: background-color 2s ease; /* Fargen falmer etter 2 sekunder */
 }
-.highlight-link:hover {
-  color: #0056b3;
-}
+
 
 img {
   display: block;
-  margin: 20px auto; /* Sentraliserer bildet */
-  max-width: 100%; /* Sikrer at bildet ikke overskrider bredden på containeren */
-  height: auto; /* Bevarer bildeforholdet */
-  border-radius: 8px; /* Runde hjørner */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Skygge rundt bildet */
+  margin: 20px auto; 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
+
+
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.theme-button {
+  background: linear-gradient(90deg, #0056b3, #1e88e5);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+/*
+.theme-button:hover {
+  background: linear-gradient(90deg, #1e88e5, #0056b3);
+  box-shadow: 0 0 15px rgba(0, 136, 255, 0.8), 0 0 30px rgba(0, 136, 255, 0.4);
+  transform: scale(1.1);
+}
+*/
+.theme-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 8px rgba(0, 136, 255, 0.8);
+}
+
+.theme-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: 0.5s;
+}
+
+.theme-button:hover::before {
+  left: 100%;
+}
+
+#starWarsModeButton {
+  background: linear-gradient(90deg, #ffe81f, #ffcc00);
+  color: black;
+}
+/*
+#starWarsModeButton:hover {
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.8), 0 0 30px rgba(255, 232, 31, 0.4);
+}
+*/
+#starWarsModeButton:active {
+  box-shadow: 0 0 8px rgba(255, 232, 31, 0.8);
+}
+
+

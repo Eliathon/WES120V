@@ -101,22 +101,29 @@ window.addEventListener("scroll", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Hent hash fra URL
-  const hash = window.location.hash.substring(1); // Fjerner #
-  
-  if (hash) {
-    const targetElement = document.getElementById(hash);
-    if (targetElement) {
-      // Legg til highlight-stil
-      targetElement.style.backgroundColor = "#f0f8ff";
-      targetElement.style.border = "2px solid #1e88e5";
+window.addEventListener("hashchange", () => {
+  const hash = window.location.hash;
+  const targetElement = document.querySelector(hash);
 
-      // Fjern highlight etter 4 sekunder
+  if (targetElement) {
+      targetElement.classList.add("highlight");
       setTimeout(() => {
-        targetElement.style.backgroundColor = "";
-        targetElement.style.border = "";
-      }, 4000);
-    }
+          targetElement.classList.remove("highlight");
+      }, 3000);
   }
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+  if (hash) {
+      const targetElement = document.querySelector(hash);
+
+      if (targetElement) {
+          targetElement.classList.add("highlight");
+          setTimeout(() => {
+              targetElement.classList.remove("highlight");
+          }, 3000);
+      }
+  }
+});
+
