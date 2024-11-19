@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fase 3</title>
-    <link rel="stylesheet" href="../css/styles2.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- Navigasjonsmeny -->
@@ -13,7 +13,11 @@
         <a href="../index.html">Fase 3</a>
       </h1>
       <ul class="nav-menu">
-        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektarbeid og prosjektledelse</a></li>
+        <li>
+          <a href="/html/prosjektledelse_og_prosjektarbeid.html"
+            >Prosjektarbeid og prosjektledelse</a
+          >
+        </li>
         <li><a href="/html/webutvikling.html">Webutvikling</a></li>
         <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
         <li><a href="/html/kilder.html">Kilder</a></li>
@@ -40,9 +44,9 @@
             hva som er innholdet på nettsiden. Kodespråket tar i bruk såkalte
             tagger som blir brukt til å gi teksten struktur og brukes til å gi
             kontekst til hva som skjer i koden. Eksempler på disse taggene kan
-            være <code>&lt;header&gt;</code> eller <code>&lt;nav&gt;</code> (Nätt,
-            2024). Vist i eksemplet under har vi vist et utdrag av hvordan
-            HTML-kode vil se ut.
+            være <code>&lt;header&gt;</code> eller
+            <code>&lt;nav&gt;</code> (Nätt, 2024). Vist i eksemplet under har vi
+            vist et utdrag av hvordan HTML-kode vil se ut.
           </p>
 
           <h3>CSS</h3>
@@ -50,28 +54,37 @@
             CSS er et stilsett for HTML-kode på nettet. CSS står for alt av
             detaljer, som farger, enkle animasjoner, utforming, skrifttyper,
             layout osv. CSS er viktig ettersom det gir nettsider sjel og sørger
-            for at alle sidene på en nettside ser like ut. Dette fungerer godt for
-            større nettsider, da man kan beholde tema og utforming på tvers av
-            sidene. CSS fungerer ved å ta HTML-tagger og gi dem karakter og
+            for at alle sidene på en nettside ser like ut. Dette fungerer godt
+            for større nettsider, da man kan beholde tema og utforming på tvers
+            av sidene. CSS fungerer ved å ta HTML-tagger og gi dem karakter og
             utforming slik at nettsiden ser bedre ut (Nätt, 2024).
           </p>
 
           <!--Kode inspirtert av https://www.geeksforgeeks.org/how-to-make-live-coding-editor-using-html-css-and-javascript/ -->
-          <h4>Prøv HTML og CSS-kode</h4> <br>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <h4>Prøv HTML og CSS-kode</h4>
+          <br />
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
             <!-- HTML Editor -->
-            <div style="flex: 1; min-width: 45%;">
+            <div style="flex: 1; min-width: 45%">
               <h5>HTML</h5>
-              <textarea id="html-editor" rows="10" style="width: 100%; font-family: monospace">
+              <textarea
+                id="html-editor"
+                rows="10"
+                style="width: 100%; font-family: monospace"
+              >
           <h1>Hei verden!</h1>
           <p>Dette er html kode.</p>
               </textarea>
             </div>
-          
+
             <!-- CSS Editor -->
-            <div style="flex: 1; min-width: 45%;">
+            <div style="flex: 1; min-width: 45%">
               <h5>CSS</h5>
-              <textarea id="css-editor" rows="10" style="width: 100%; font-family: monospace">
+              <textarea
+                id="css-editor"
+                rows="10"
+                style="width: 100%; font-family: monospace"
+              >
             h1 {
             color: blue;
           }
@@ -83,29 +96,46 @@
               </textarea>
             </div>
           </div>
-          
+
           <!-- Preview Button -->
-          <div style="margin-top: 10px;">
-            <button onclick="updatePreview()" style="padding: 10px 20px; background-color: #0d47a1; color: white; border: none; border-radius: 5px; cursor: pointer;">
+          <div style="margin-top: 10px">
+            <button
+              onclick="updatePreview()"
+              style="
+                padding: 10px 20px;
+                background-color: #0d47a1;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+            >
               Se resultat
             </button>
           </div>
-          
+
           <!-- Preview Iframe -->
-          <iframe id="preview" style="width: 100%; height: 300px; border: 1px solid #ccc; margin-top: 10px;"></iframe>
-          
+          <iframe
+            id="preview"
+            style="
+              width: 100%;
+              height: 300px;
+              border: 1px solid #ccc;
+              margin-top: 10px;
+            "
+          ></iframe>
 
           <h3>Backend</h3>
           <p>
-            Backend-utvikling er den delen av koden vi som vanlige webbrukere ikke
-            ser. Dette er delen av utviklingen som håndterer databaser, tunge
-            kalkulasjoner og lagring av informasjon som innloggingsinformasjon og
-            brukerdata. Frontend-utviklingen, som består av HTML og CSS, er ofte
-            adskilt fra backend-utviklingen, som gjerne er skrevet i språk som
-            Java, SQL eller Python (Vihovde, 2020). Frontend og backend
-            kommuniserer gjennom et API («Application Programming Interface»), som
-            er et grensesnitt som forenkler kommunikasjon av data og
-            funksjonalitet (Vihovde, 2020).
+            Backend-utvikling er den delen av koden vi som vanlige webbrukere
+            ikke ser. Dette er delen av utviklingen som håndterer databaser,
+            tunge kalkulasjoner og lagring av informasjon som
+            innloggingsinformasjon og brukerdata. Frontend-utviklingen, som
+            består av HTML og CSS, er ofte adskilt fra backend-utviklingen, som
+            gjerne er skrevet i språk som Java, SQL eller Python (Vihovde,
+            2020). Frontend og backend kommuniserer gjennom et API («Application
+            Programming Interface»), som er et grensesnitt som forenkler
+            kommunikasjon av data og funksjonalitet (Vihovde, 2020).
           </p>
 
           <h3>Testing</h3>
@@ -113,33 +143,36 @@
             Testing er en essensiell del av implementeringsfasen for å finne ut
             hvor godt produktet fungerer. Det er viktig for validering og for å
             sikre at funksjoner og design fungerer som de skal. Vi deler gjerne
-            opp testing i formativ og summativ evaluering (Sandnes, 2018, s. 292).
+            opp testing i formativ og summativ evaluering (Sandnes, 2018, s.
+            292).
           </p>
           <ul>
             <li>
-              <strong>Formativ evaluering:</strong> Gjøres under utviklingen for å
-              sikre at funksjonene implementeres riktig. Småjusteringer er enkle å
-              gjennomføre i denne fasen.
+              <strong>Formativ evaluering:</strong> Gjøres under utviklingen for
+              å sikre at funksjonene implementeres riktig. Småjusteringer er
+              enkle å gjennomføre i denne fasen.
             </li>
             <li>
               <strong>Summativ evaluering:</strong> Utføres mot slutten av
               utviklingen, når produktet er nesten ferdig. Her kontrollerer vi
-              helheten og sørger for at alt fungerer som det skal før godkjenning.
+              helheten og sørger for at alt fungerer som det skal før
+              godkjenning.
             </li>
           </ul>
           <p>
             Underveis i utviklingsprosessen har vi også alfa- og betatesting.
             Alfa-testing utføres når produktet ikke er helt ferdig, mens
-            betatesting utføres på et mer komplett, men fortsatt uferdig produkt.
-            Jo senere i utviklingen feil rettes, jo større blir kostnadene. Derfor
-            er det viktig med tidlig testing for å redusere utgifter og arbeidet
-            mot slutten (Sandnes, 2018, s. 292).
+            betatesting utføres på et mer komplett, men fortsatt uferdig
+            produkt. Jo senere i utviklingen feil rettes, jo større blir
+            kostnadene. Derfor er det viktig med tidlig testing for å redusere
+            utgifter og arbeidet mot slutten (Sandnes, 2018, s. 292).
           </p>
-          <div class="next-page-container">
+          <div class="previous-page-container">
             <a href="/html/fase2.html" class="previous-button">Previous Page</a>
+          </div>
+          <div class="next-page-container">
             <a href="/html/quiz.html" class="next-button">Klar for quiz?</a>
-          </div>          
-          
+          </div>
         </section>
       </main>
 
@@ -151,7 +184,11 @@
             <details open="">
               <summary>Prosjektarbeid og prosjektledelse</summary>
               <ul>
-                <li><a href="../html/prosjektledelse_og_prosjektarbeid.html">Introduksjon</a></li>
+                <li>
+                  <a href="../html/prosjektledelse_og_prosjektarbeid.html"
+                    >Introduksjon</a
+                  >
+                </li>
               </ul>
             </details>
           </li>
@@ -161,7 +198,11 @@
               <ul>
                 <li><a href="../html/systemutvikling.html">Introduksjon</a></li>
                 <li><a href="../html/agile_metoder.html">Agile metoder</a></li>
-                <li><a href="../html/tradisjonelle_metoder.html">Tradisjonelle metoder</a></li>
+                <li>
+                  <a href="../html/tradisjonelle_metoder.html"
+                    >Tradisjonelle metoder</a
+                  >
+                </li>
               </ul>
             </details>
           </li>
@@ -170,13 +211,19 @@
               <summary>Webutvikling</summary>
               <ul>
                 <li><a href="../html/webutvikling.html">Introduksjon</a></li>
-                <li><a href="../html/fase1.html">Fase 1: Analysere og forstå</a></li>
-                <li><a href="../html/fase2.html">Fase 2: Designe og utforske</a></li>
+                <li>
+                  <a href="../html/fase1.html">Fase 1: Analysere og forstå</a>
+                </li>
+                <li>
+                  <a href="../html/fase2.html">Fase 2: Designe og utforske</a>
+                </li>
                 <li><a href="../html/fase3.html">Fase 3: Implementere</a></li>
               </ul>
             </details>
           </li>
-          <li><a href="../html/kilder.html"><b>Kilder</b></a></li>
+          <li>
+            <a href="../html/kilder.html"><b>Kilder</b></a>
+          </li>
         </ul>
       </aside>
     </div>
