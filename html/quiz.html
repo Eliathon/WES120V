@@ -13,10 +13,9 @@
         <a href="../index.html">Quiz</a>
       </h1>
       <ul class="nav-menu">
-        <li><a href="../index.html">Hjem</a></li>
-        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektledelse</a></li>
-        <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
+        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektarbeid og prosjektledelse</a></li>
         <li><a href="/html/webutvikling.html">Webutvikling</a></li>
+        <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
         <li><a href="/html/kilder.html">Kilder</a></li>
         <li><a href="/html/quiz.html">Quiz</a></li>
       </ul>
@@ -27,6 +26,14 @@
       <section class="reading-content">
         <h1>Quiz</h1>
         <p>Test dine kunnskaper fra innholdet om prosjektarbeid, systemutvikling og webutvikling.</p>
+
+        <!-- Resultat-seksjonen flyttes hit -->
+        <section id="quiz-result" class="reading-content" style="display: none;">
+          <h2>Resultat</h2>
+          <p id="score">Du fikk <span id="score-value"></span> av 10 riktige.</p>
+          <button type="button" id="reset-quiz" class="reset-quiz">Tilbakestill spørsmål</button>
+        </section>
+
         <form id="quiz-form">
           <!-- Spørsmål -->
           <div class="quiz-question">
@@ -110,13 +117,15 @@
 
         </form>
       </section>
-
+      <div class="next-page-container">
+        <a href="/index.html" class="next-button">Hjemmesiden</a>
+      </div>          
+      
       <section id="quiz-result" class="reading-content" style="display: none;">
         <h2>Resultat</h2>
         <p id="score">Du fikk <span id="score-value"></span> av 10 riktige.</p>
         <button type="button" id="reset-quiz" class="reset-quiz">Tilbakestill spørsmål</button>
       </section>
-      
       
     </main>
 
