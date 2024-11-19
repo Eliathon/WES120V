@@ -11,7 +11,9 @@
     <!-- Navigasjons menyen på toppen -->
     <nav class="navbar">
       <h1 class="logo">
-        <a href="../index.html">Prosjektledelse og Prosjektarbeid</a>
+        <a href="../index.html" class="logo"
+          >Prosjektledelse og Prosjektarbeid</a
+        >
       </h1>
       <ul class="nav-menu">
         <li>
@@ -25,19 +27,24 @@
         <li><a href="quiz.html">Quiz</a></li>
       </ul>
       <div class="theme-buttons">
-        <button onclick="setTheme('normal')" class="theme-button">
-          Normal
-        </button>
-        <button onclick="setTheme('star-wars')" class="theme-button">
-          Star Wars
-        </button>
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
       </div>
     </nav>
 
     <!-- Hovedinnholdet -->
     <div class="main-container">
       <main class="content-container">
-        <div class="fade"></div>
         <section class="reading-content">
           <div class="crawl">
             <h1>Prosjektledelse og Prosjektarbeid</h1>
@@ -147,7 +154,9 @@
           <li><a href="../index.html">Hjem</a></li>
           <li>
             <details open="">
-              <summary>Prosjektarbeid og prosjektledelse</summary>
+              <summary class="summary">
+                Prosjektarbeid og prosjektledelse
+              </summary>
               <ul>
                 <li>
                   <a href="../html/prosjektledelse_og_prosjektarbeid.html"
@@ -159,7 +168,7 @@
           </li>
           <li>
             <details open="">
-              <summary>Systemutvikling</summary>
+              <summary class="summary">Systemutvikling</summary>
               <ul>
                 <li><a href="../html/systemutvikling.html">Introduksjon</a></li>
                 <li><a href="../html/agile_metoder.html">Agile metoder</a></li>
@@ -173,7 +182,7 @@
           </li>
           <li>
             <details open="">
-              <summary>Webutvikling</summary>
+              <summary class="summary">Webutvikling</summary>
               <ul>
                 <li><a href="../html/webutvikling.html">Introduksjon</a></li>
                 <li>

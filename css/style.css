@@ -437,12 +437,14 @@ footer {
 
 /* Star Wars Theme */
 body.star-wars {
-  background-color: #000000;
+  background-image: url("../assets/starry\ sky.jpg");
   color: #535353;
 }
 
 .star-wars .navbar {
+  position: relative;
   background-color: #222;
+  z-index: 10;
 }
 
 .star-wars .logo {
@@ -471,6 +473,10 @@ body.star-wars {
   color: #ffe81f;
 }
 
+.star-wars .summary {
+  color: #ffe81f;
+}
+
 .star-wars .tema-container {
   background-image: url("../assets/container_image.jpg");
   background-size: cover;
@@ -480,7 +486,8 @@ body.star-wars {
 }
 
 .star-wars .content-container {
-  background-image: url("../assets/star_wars.jpg");
+  background-image: url("../assets/starry\ sky.jpg");
+  overflow: hidden; /* Makes it so that the star wars crawl animation doesn't break the page by overflowing */
 }
 
 .star-wars .reading-content {
@@ -495,7 +502,7 @@ body.star-wars {
   letter-spacing: 6px;
   line-height: 150%;
   text-align: justify;
-  background-image: url("../assets/star_wars.jpg");
+  background-image: url("../assets/starry\ sky.jpg");
 }
 
 .star-wars .crawl {
@@ -503,24 +510,24 @@ body.star-wars {
   top: -100px;
   transform-origin: 50% 100%;
   animation: crawl 60s linear;
+  z-index: 1;
 }
 
 .star-wars .fade {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  min-height: 10vh;
   top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
+  background-image: url("../assets/starry\ sky.jpg");
   z-index: 1;
 }
 
 @keyframes crawl {
   0% {
-    top: 0;
-    transform: rotateX(20deg) translateZ(0);
+    transform: translateY(0) translateZ(0) rotateX(62deg);
   }
   100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
+    transform: translateY(-3000px) translateZ(-6000px) rotateX(25deg);
+    opacity: 0;
   }
 }
