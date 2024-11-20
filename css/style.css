@@ -80,11 +80,6 @@ nav a {
   background-color: #bbdefb;
   border-radius: 0.5rem;
   flex: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-color: #bbdefb;
 }
 
 .content-button {
@@ -148,7 +143,6 @@ footer {
   flex: 1;
   text-align: left;
   padding: 1rem;
-  background-color: transparent;
   max-width: 250px;
   position: sticky;
   top: 1rem;
@@ -184,7 +178,6 @@ footer {
   margin-top: 0.5rem;
 }
 
-/* Stil for quiz-knappen */
 .submit-quiz {
   display: inline-block;
   padding: 1rem 2rem;
@@ -208,7 +201,6 @@ footer {
   transform: translateY(1px);
 }
 
-/* Stil for tilbakestill-knappen */
 .reset-quiz {
   display: inline-block;
   padding: 1rem 2rem;
@@ -246,7 +238,6 @@ footer {
   float: right;
 }
 
-/*s */
 .previous-button,
 .next-button {
   display: inline-block;
@@ -437,7 +428,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Star Wars Theme */
 body.star-wars {
   background-image: url("../assets/starry\ sky.jpg");
   color: #535353;
@@ -489,7 +479,7 @@ body.star-wars {
 
 .star-wars .content-container {
   background-image: url("../assets/starry\ sky.jpg");
-  overflow: hidden; /* Makes it so that the star wars crawl animation doesn't break the page by overflowing */
+  overflow: hidden;
 }
 
 .star-wars .reading-content {
@@ -534,15 +524,6 @@ body.star-wars {
   }
 }
 
-img {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .theme-buttons {
   display: flex;
   justify-content: center;
@@ -564,13 +545,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-/*
-.theme-button:hover {
-  background: linear-gradient(90deg, #1e88e5, #0056b3);
-  box-shadow: 0 0 15px rgba(0, 136, 255, 0.8), 0 0 30px rgba(0, 136, 255, 0.4);
-  transform: scale(1.1);
-}
-*/
+
 .theme-button:active {
   transform: scale(0.95);
   box-shadow: 0 0 8px rgba(0, 136, 255, 0.8);
@@ -596,13 +571,18 @@ img {
   background: linear-gradient(90deg, #ffe81f, #ffcc00);
   color: black;
 }
-/*
-#starWarsModeButton:hover {
-  box-shadow: 0 0 15px rgba(255, 232, 31, 0.8), 0 0 30px rgba(255, 232, 31, 0.4);
-}
-*/
+
 #starWarsModeButton:active {
   box-shadow: 0 0 8px rgba(255, 232, 31, 0.8);
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Media query for screens smaller than 768px */
