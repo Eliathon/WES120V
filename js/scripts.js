@@ -1,22 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
   const normalModeButton = document.getElementById("normalModeButton");
   const starWarsModeButton = document.getElementById("starWarsModeButton");
   const lightsaberOffSound = document.getElementById("lightsaberOffSound");
   const lightsaberOnSound = document.getElementById("lightsaberOnSound");
-  const body = document.body; // Reference to the body element
 
+  // Load the saved theme when the page loads
+  if (localStorage.getItem("theme") === "star-wars") {
+    body.classList.add("star-wars");
+  }
+
+  // Uses localstorage to get the
   normalModeButton.addEventListener("click", () => {
-    // Check if the 'star-wars' class is currently set
     if (body.classList.contains("star-wars")) {
-      lightsaberOffSound.play(); // Only play the off sound if in Star Wars mode
+      lightsaberOffSound.play();
+      localStorage.setItem("theme", "normal");
     }
-    body.classList.remove("star-wars"); // Remove the class if it's there
+    body.classList.remove("star-wars");
   });
 
   starWarsModeButton.addEventListener("click", () => {
-    // Check if the 'star-wars' class is not set
     if (!body.classList.contains("star-wars")) {
-      lightsaberOnSound.play(); // Only play the on sound if not currently in Star Wars mode
+      lightsaberOnSound.play();
+      localStorage.setItem("theme", "star-wars");
     }
     body.classList.add("star-wars");
   });
@@ -94,36 +100,34 @@ document.getElementById("reset-quiz").addEventListener("click", function () {
 // Parallax-effekt
 window.addEventListener("scroll", function () {
   const parallax = document.querySelector(".hero");
-  let scrollPosition = window.pageYOffset;
-
-  // Juster bakgrunnsposisjon
-  parallax.style.backgroundPositionY = scrollPosition * 0.5 + "px";
+  if (parallax) {
+    let scrollPosition = window.scrollY;
+    parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + "px";
+  }
 });
-
 
 window.addEventListener("hashchange", () => {
   const hash = window.location.hash;
   const targetElement = document.querySelector(hash);
 
   if (targetElement) {
-      targetElement.classList.add("highlight");
-      setTimeout(() => {
-          targetElement.classList.remove("highlight");
-      }, 3000);
+    targetElement.classList.add("highlight");
+    setTimeout(() => {
+      targetElement.classList.remove("highlight");
+    }, 3000);
   }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
   const hash = window.location.hash;
   if (hash) {
-      const targetElement = document.querySelector(hash);
+    const targetElement = document.querySelector(hash);
 
-      if (targetElement) {
-          targetElement.classList.add("highlight");
-          setTimeout(() => {
-              targetElement.classList.remove("highlight");
-          }, 3000);
-      }
+    if (targetElement) {
+      targetElement.classList.add("highlight");
+      setTimeout(() => {
+        targetElement.classList.remove("highlight");
+      }, 3000);
+    }
   }
 });
-

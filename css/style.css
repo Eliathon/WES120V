@@ -336,6 +336,8 @@ footer {
   background-image: url("../assets/bilde_1.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
   padding: 6rem 1rem;
   text-align: center;
@@ -537,17 +539,14 @@ body.star-wars {
   transition: background-color 2s ease; /* Fargen falmer etter 2 sekunder */
 }
 
-
 img {
   display: block;
-  margin: 20px auto; 
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 8px; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .theme-buttons {
   display: flex;
@@ -610,5 +609,3 @@ img {
 #starWarsModeButton:active {
   box-shadow: 0 0 8px rgba(255, 232, 31, 0.8);
 }
-
-
