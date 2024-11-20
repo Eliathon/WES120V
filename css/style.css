@@ -627,3 +627,74 @@ img {
     padding: 10px 0;
   }
 }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  background-color: #e3f2fd;
+  color: #1a237e;
+}
+
+nav a {
+  font-size: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #e3f2fd;
+}
+
+.text-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e3f2fd;
+}
+
+.reading-content p {
+  font-size: 1.25rem;
+  color: #1a237e;
+  line-height: 1.6;
+}
+
+.side-nav a {
+  font-size: 1rem;
+  color: #0d47a1;
+}
+
+.content-button {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.submit-quiz, .reset-quiz {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.theme-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.source strong {
+  font-size: 1rem; /* Default inherited size */
+}
+
+p, ul, ol, li {
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem; /* Matches .reading-content p */
+  line-height: 1.6;
+  color: #1a237e; /* Matches text color */
+  margin-bottom: 1.5rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem; /* Standard indent for lists */
+  list-style-position: outside; /* Standard bullet/number alignment */
+}
+
+li {
+  margin-bottom: 0.5rem; /* Space between list items */
+}
