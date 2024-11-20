@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fase 1: Kilder</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="/js/scripts.js"></script>
+    <script src="/js/scripts.js" ></script>
   </head>
   <body>
     <!-- Navigasjons menyen på toppen -->
@@ -24,11 +24,26 @@
         <li><a href="/html/kilder.html">Kilder</a></li>
         <li><a href="quiz.html">Quiz</a></li>
       </ul>
+      <div class="theme-buttons">
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
+      </div>
     </nav>
 
     <!-- Hovedinnholdet -->
     <main class="content-container">
       <section class="reading-content">
+        <div class="crawl">
         <h1>Oversikt over Kilder</h1>
         <p>Her er en liste over alle kilder brukt i prosjektet:</p>
 

@@ -105,29 +105,3 @@ window.addEventListener("scroll", function () {
     parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + "px";
   }
 });
-
-window.addEventListener("hashchange", () => {
-  const hash = window.location.hash;
-  const targetElement = document.querySelector(hash);
-
-  if (targetElement) {
-    targetElement.classList.add("highlight");
-    setTimeout(() => {
-      targetElement.classList.remove("highlight");
-    }, 3000);
-  }
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-  const hash = window.location.hash;
-  if (hash) {
-    const targetElement = document.querySelector(hash);
-
-    if (targetElement) {
-      targetElement.classList.add("highlight");
-      setTimeout(() => {
-        targetElement.classList.remove("highlight");
-      }, 3000);
-    }
-  }
-});

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/scripts.js" defer></script>
   </head>
   <body>
     <!-- Navigasjonsmeny -->
@@ -13,229 +14,30 @@
         <a href="../index.html">Quiz</a>
       </h1>
       <ul class="nav-menu">
-        <li>
-          <a href="/html/prosjektledelse_og_prosjektarbeid.html"
-            >Prosjektarbeid og prosjektledelse</a
-          >
-        </li>
+        <li><a href="/html/prosjektledelse_og_prosjektarbeid.html">Prosjektarbeid og prosjektledelse</a></li>
         <li><a href="/html/webutvikling.html">Webutvikling</a></li>
         <li><a href="/html/systemutvikling.html">Systemutvikling</a></li>
         <li><a href="/html/kilder.html">Kilder</a></li>
         <li><a href="/html/quiz.html">Quiz</a></li>
       </ul>
+      <div class="theme-buttons">
+        <audio
+          id="lightsaberOffSound"
+          src="../assets/Lightsaber off sound effects.mp3"
+          preload="auto"
+        ></audio>
+        <audio
+          id="lightsaberOnSound"
+          src="../assets/Lightsaber Turn On - Sound Effect From Star Wars.mp3"
+          preload="auto"
+        ></audio>
+        <button id="normalModeButton" class="theme-button">Normal</button>
+        <button id="starWarsModeButton" class="theme-button">Star Wars</button>
+      </div>
     </nav>
 
     <!-- Hovedinnhold -->
     <main class="content-container">
-      <section class="reading-content">
-        <h1>Quiz</h1>
-        <p>
-          Test dine kunnskaper fra innholdet om prosjektarbeid, systemutvikling
-          og webutvikling.
-        </p>
-
-        <!-- Resultat-seksjonen flyttes hit -->
-        <section id="quiz-result" class="reading-content" style="display: none">
-          <h2>Resultat</h2>
-          <p id="score">
-            Du fikk <span id="score-value"></span> av 10 riktige.
-          </p>
-          <button type="button" id="reset-quiz" class="reset-quiz">
-            Tilbakestill spørsmål
-          </button>
-        </section>
-
-        <form id="quiz-form">
-          <!-- Spørsmål -->
-          <div class="quiz-question">
-            <p><strong>1. Hva er målet med fase 1 i webutvikling?</strong></p>
-            <label
-              ><input type="radio" name="q1" value="0" /> Designe
-              nettsiden</label
-            ><br />
-            <label
-              ><input type="radio" name="q1" value="1" /> Forstå brukernes
-              behov</label
-            ><br />
-            <label
-              ><input type="radio" name="q1" value="0" /> Starte
-              implementering</label
-            ><br />
-          </div>
-
-          <div class="quiz-question">
-            <p><strong>2. Hva er en fordel med PRINCE2?</strong></p>
-            <label
-              ><input type="radio" name="q2" value="0" /> Mangler
-              struktur</label
-            ><br />
-            <label
-              ><input type="radio" name="q2" value="1" /> Gir en strukturert og
-              kontrollert tilnærming</label
-            ><br />
-            <label
-              ><input type="radio" name="q2" value="0" /> Krever ingen
-              planlegging</label
-            ><br />
-          </div>
-
-          <div class="quiz-question">
-            <p><strong>3. Hva betyr WCAG?</strong></p>
-            <label
-              ><input type="radio" name="q3" value="0" /> Web Creation
-              Accessibility Guidelines</label
-            ><br />
-            <label
-              ><input type="radio" name="q3" value="1" /> Web Content
-              Accessibility Guidelines</label
-            ><br />
-            <label
-              ><input type="radio" name="q3" value="0" /> Web Coordination and
-              Graphics</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 4 -->
-          <div class="quiz-question">
-            <p>
-              <strong>4. Hva er hovedfokuset i front-end utvikling?</strong>
-            </p>
-            <label
-              ><input type="radio" name="q4" value="0" />
-              Serverhåndtering</label
-            ><br />
-            <label
-              ><input type="radio" name="q4" value="1" /> Design og
-              brukeropplevelse</label
-            ><br />
-            <label
-              ><input type="radio" name="q4" value="0" /> Databehandling</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 5 -->
-          <div class="quiz-question">
-            <p><strong>5. Hva er en av fordelene med Scrum?</strong></p>
-            <label
-              ><input type="radio" name="q5" value="1" /> Hyppige leveranser og
-              kontinuerlige forbedringer</label
-            ><br />
-            <label
-              ><input type="radio" name="q5" value="0" /> Faste, uforanderlige
-              krav</label
-            ><br />
-            <label
-              ><input type="radio" name="q5" value="0" /> En lineær
-              prosess</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 6 -->
-          <div class="quiz-question">
-            <p>
-              <strong
-                >6. Hvilken metode følger en lineær og sekvensiell
-                tilnærming?</strong
-              >
-            </p>
-            <label><input type="radio" name="q6" value="0" /> Agile</label
-            ><br />
-            <label
-              ><input type="radio" name="q6" value="1" />
-              Fossefallsmetoden</label
-            ><br />
-            <label><input type="radio" name="q6" value="0" /> Scrum</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 7 -->
-          <div class="quiz-question">
-            <p>
-              <strong
-                >7. Hva er en vanlig måte å utføre brukertesting på?</strong
-              >
-            </p>
-            <label
-              ><input type="radio" name="q7" value="0" /> Ignorere
-              tilbakemeldinger</label
-            ><br />
-            <label
-              ><input type="radio" name="q7" value="1" /> Observere brukere mens
-              de tester nettsiden</label
-            ><br />
-            <label
-              ><input type="radio" name="q7" value="0" /> Bare teste nettsiden
-              internt</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 8 -->
-          <div class="quiz-question">
-            <p>
-              <strong>8. Hva er hovedmålet med fase 3 i webutvikling?</strong>
-            </p>
-            <label
-              ><input type="radio" name="q8" value="1" /> Implementere og
-              virkeliggjøre prosjektet</label
-            ><br />
-            <label
-              ><input type="radio" name="q8" value="0" /> Utføre
-              brukertesting</label
-            ><br />
-            <label
-              ><input type="radio" name="q8" value="0" /> Utføre
-              behovsanalyse</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 9 -->
-          <div class="quiz-question">
-            <p>
-              <strong
-                >9. Hva er en av hovedfordelene med SaaS (Software as a
-                Service)?</strong
-              >
-            </p>
-            <label
-              ><input type="radio" name="q9" value="0" /> Brukeren må
-              administrere systemet</label
-            ><br />
-            <label
-              ><input type="radio" name="q9" value="1" /> En tredjepart
-              håndterer vedlikeholdet</label
-            ><br />
-            <label
-              ><input type="radio" name="q9" value="0" /> Det kreves lokal
-              installasjon av programvaren</label
-            ><br />
-          </div>
-
-          <!-- Spørsmål 10 -->
-          <div class="quiz-question">
-            <p><strong>10. Hva er en nøkkelfaktor i agile metoder?</strong></p>
-            <label
-              ><input type="radio" name="q10" value="0" /> Streng
-              dokumentasjon</label
-            ><br />
-            <label
-              ><input type="radio" name="q10" value="1" /> Tilpasning til
-              endringer</label
-            ><br />
-            <label
-              ><input type="radio" name="q10" value="0" /> Ingen
-              iterasjoner</label
-            ><br />
-          </div>
-
-          <button type="button" id="submit-quiz" class="submit-quiz">
-            Fullfør quiz
-          </button>
-        </form>
-      </section>
-      <div class="next-page-container">
-        <a href="/index.html" class="next-button">Hjemmesiden</a>
-      </div>
-
       <section id="quiz-result" class="reading-content" style="display: none">
         <h2>Resultat</h2>
         <p id="score">Du fikk <span id="score-value"></span> av 10 riktige.</p>
@@ -243,14 +45,108 @@
           Tilbakestill spørsmål
         </button>
       </section>
-    </main>
+      <section class="reading-content">
+        <div class="crawl">
+          <h1>Quiz</h1>
+          <p>Test dine kunnskaper fra innholdet om prosjektarbeid, systemutvikling og webutvikling.</p>
+
+          <!-- Quiz Form -->
+          <form id="quiz-form">
+            <!-- Question 1 -->
+            <fieldset>
+              <legend>1. Hva er målet med fase 1 i webutvikling?</legend>
+              <label for="q1-a"><input type="radio" id="q1-a" name="q1" value="0" /> Designe nettsiden</label><br />
+              <label for="q1-b"><input type="radio" id="q1-b" name="q1" value="1" /> Forstå brukernes behov</label><br />
+              <label for="q1-c"><input type="radio" id="q1-c" name="q1" value="0" /> Starte implementering</label><br />
+            </fieldset>
+
+            <!-- Question 2 -->
+            <fieldset>
+              <legend>2. Hva er en fordel med PRINCE2?</legend>
+              <label for="q2-a"><input type="radio" id="q2-a" name="q2" value="0" /> Mangler struktur</label><br />
+              <label for="q2-b"><input type="radio" id="q2-b" name="q2" value="1" /> Gir en strukturert og kontrollert tilnærming</label><br />
+              <label for="q2-c"><input type="radio" id="q2-c" name="q2" value="0" /> Krever ingen planlegging</label><br />
+            </fieldset>
+
+            <!-- Question 3 -->
+            <fieldset>
+              <legend>3. Hva betyr WCAG?</legend>
+              <label for="q3-a"><input type="radio" id="q3-a" name="q3" value="0" /> Web Creation Accessibility Guidelines</label><br />
+              <label for="q3-b"><input type="radio" id="q3-b" name="q3" value="1" /> Web Content Accessibility Guidelines</label><br />
+              <label for="q3-c"><input type="radio" id="q3-c" name="q3" value="0" /> Web Coordination and Graphics</label><br />
+            </fieldset>
+
+            <!-- Question 4 -->
+            <fieldset>
+              <legend>4. Hva er hovedfokuset i front-end utvikling?</legend>
+              <label for="q4-a"><input type="radio" id="q4-a" name="q4" value="0" /> Serverhåndtering</label><br />
+              <label for="q4-b"><input type="radio" id="q4-b" name="q4" value="1" /> Design og brukeropplevelse</label><br />
+              <label for="q4-c"><input type="radio" id="q4-c" name="q4" value="0" /> Databehandling</label><br />
+            </fieldset>
+
+            <!-- Question 5 -->
+            <fieldset>
+              <legend>5. Hva er en av fordelene med Scrum?</legend>
+              <label for="q5-a"><input type="radio" id="q5-a" name="q5" value="1" /> Hyppige leveranser og kontinuerlige forbedringer</label><br />
+              <label for="q5-b"><input type="radio" id="q5-b" name="q5" value="0" /> Faste, uforanderlige krav</label><br />
+              <label for="q5-c"><input type="radio" id="q5-c" name="q5" value="0" /> En lineær prosess</label><br />
+            </fieldset>
+
+            <!-- Question 6 -->
+            <fieldset>
+              <legend>6. Hvilken metode følger en lineær og sekvensiell tilnærming?</legend>
+              <label for="q6-a"><input type="radio" id="q6-a" name="q6" value="0" /> Agile</label><br />
+              <label for="q6-b"><input type="radio" id="q6-b" name="q6" value="1" /> Fossefallsmetoden</label><br />
+              <label for="q6-c"><input type="radio" id="q6-c" name="q6" value="0" /> Scrum</label><br />
+            </fieldset>
+
+            <!-- Question 7 -->
+            <fieldset>
+              <legend>7. Hva er en vanlig måte å utføre brukertesting på?</legend>
+              <label for="q7-a"><input type="radio" id="q7-a" name="q7" value="0" /> Ignorere tilbakemeldinger</label><br />
+              <label for="q7-b"><input type="radio" id="q7-b" name="q7" value="1" /> Observere brukere mens de tester nettsiden</label><br />
+              <label for="q7-c"><input type="radio" id="q7-c" name="q7" value="0" /> Bare teste nettsiden internt</label><br />
+            </fieldset>
+
+            <!-- Question 8 -->
+            <fieldset>
+              <legend>8. Hva er hovedmålet med fase 3 i webutvikling?</legend>
+              <label for="q8-a"><input type="radio" id="q8-a" name="q8" value="1" /> Implementere og virkeliggjøre prosjektet</label><br />
+              <label for="q8-b"><input type="radio" id="q8-b" name="q8" value="0" /> Utføre brukertesting</label><br />
+              <label for="q8-c"><input type="radio" id="q8-c" name="q8" value="0" /> Utføre behovsanalyse</label><br />
+            </fieldset>
+
+            <!-- Question 9 -->
+            <fieldset>
+              <legend>9. Hva er en av hovedfordelene med SaaS (Software as a Service)?</legend>
+              <label for="q9-a"><input type="radio" id="q9-a" name="q9" value="0" /> Brukeren må administrere systemet</label><br />
+              <label for="q9-b"><input type="radio" id="q9-b" name="q9" value="1" /> En tredjepart håndterer vedlikeholdet</label><br />
+              <label for="q9-c"><input type="radio" id="q9-c" name="q9" value="0" /> Det kreves lokal installasjon av programvaren</label><br />
+            </fieldset>
+
+            <!-- Question 10 -->
+            <fieldset>
+              <legend>10. Hva er en nøkkelfaktor i agile metoder?</legend>
+              <label for="q10-a"><input type="radio" id="q10-a" name="q10" value="0" /> Streng dokumentasjon</label><br />
+              <label for="q10-b"><input type="radio" id="q10-b" name="q10" value="1" /> Tilpasning til endringer</label><br />
+              <label for="q10-c"><input type="radio" id="q10-c" name="q10" value="0" /> Ingen iterasjoner</label><br />
+            </fieldset>
+
+            <button type="button" id="submit-quiz" class="submit-quiz">
+              Fullfør quiz
+            </button>
+          </form>
+        </section>
+        <div class="next-page-container">
+          <a href="/index.html" class="next-button">Hjemmesiden</a>
+        </div>
+  
+       
+      </main>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2024. Gruppe 13. Alle rettigheter forbeholdt.</p>
     </footer>
-
-    <!-- Script -->
-    <script src="../js/scripts.js"></script>
   </body>
 </html>
