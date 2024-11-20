@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const starWarsModeButton = document.getElementById("starWarsModeButton");
   const lightsaberOffSound = document.getElementById("lightsaberOffSound");
   const lightsaberOnSound = document.getElementById("lightsaberOnSound");
- // Referanse til body-elementet
+  const crawlElement = document.querySelector(".crawl");
+  // Referanse til body-elementet
 
   // Load the saved theme when the page loads
   if (localStorage.getItem("theme") === "star-wars") {
@@ -16,16 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sjekk om 'star-wars'-klassen er satt
     if (body.classList.contains("star-wars")) {
       lightsaberOffSound.play(); // Spill av lyden for å slå av lyssabelen kun hvis i Star Wars-modus
+      body.classList.remove("star-wars"); // Fjern klassen hvis den er der
+      localStorage.setItem("theme", "normal");
     }
-    body.classList.remove("star-wars"); // Fjern klassen hvis den er der
   });
 
   starWarsModeButton.addEventListener("click", () => {
     // Sjekk om 'star-wars'-klassen ikke er satt
     if (!body.classList.contains("star-wars")) {
       lightsaberOnSound.play(); // Spill av lyden for å slå på lyssabelen kun hvis ikke i Star Wars-modus
+      body.classList.add("star-wars"); // Legg til klassen
+      localStorage.setItem("theme", "star-wars");
     }
-    body.classList.add("star-wars"); // Legg til klassen
   });
 });
 
@@ -104,5 +107,16 @@ window.addEventListener("scroll", function () {
   if (parallax) {
     let scrollPosition = window.scrollY;
     parallax.style.backgroundPositionY = -(scrollPosition * 0.5) + "px";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const crawlElement = document.querySelector(".crawl");
+
+  if (crawlElement) {
+    crawlElement.addEventListener("animationend", () => {
+      console.log("Animation ended"); // Debug statement
+      crawlElement.style.display = "none";
+    });
   }
 });

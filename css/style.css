@@ -106,9 +106,10 @@ footer {
   color: #e3f2fd;
   text-align: center;
   padding: 1rem;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: auto;
 }
 
 .reading-content {
@@ -326,29 +327,10 @@ footer {
 /* Hero Section */
 .hero {
   background-image: url("../assets/bilde_1.jpg");
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   background-attachment: fixed;
-  color: white;
-  padding: 6rem 1rem;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 51, 0.5);
-  z-index: 1;
 }
 
 .hero-content {
@@ -449,8 +431,15 @@ body.star-wars {
 }
 
 .star-wars .hero {
-  background-image: url("../assets/star_wars.jpg");
-  background-color: #000;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/bilde_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .star-wars .hero h1 {
@@ -502,7 +491,7 @@ body.star-wars {
   position: relative;
   top: -100px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 60s linear forwards;
   z-index: 1;
 }
 
@@ -586,7 +575,6 @@ img {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .main-container {
     display: flex;
@@ -628,25 +616,41 @@ img {
     padding: 10px 0;
   }
 
+  .star-wars .body,
+  html {
+    background-image: url("../assets/starry\ sky.jpg");
+  }
+
   .star-wars .crawl {
-    animation: none; /* Stops the animation */
-    transform: none; /* Resets transformations */
-    position: static; /* Ensures content is part of the normal document flow */
-    height: auto; /* Ensures the container can expand as needed */
-    overflow: visible; /* Makes sure content can overflow if necessary */
-    font-size: 16px; /* Adjusts font size for readability */
-    line-height: 1.5; /* Adjusts line height for better text display */
-    text-align: center; /* Centers text */
+    animation: none;
+    transform: none;
+    position: static;
+    height: auto;
+    overflow: visible;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
   }
 
   .star-wars .content-container,
   .star-wars .main-container {
-    overflow: visible; /* Ensures these containers do not restrict content */
+    background-image: url("../assets/starry\ sky.jpg");
+    overflow: visible;
     position: relative;
+    min-height: 100vh;
   }
 
   .star-wars footer {
-    position: relative; /* Ensures footer flows naturally at the end of content */
+    display: none;
+  }
+
+  .tema-container-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    display: none;
   }
 }
 
@@ -690,7 +694,8 @@ nav a {
   font-weight: bold;
 }
 
-.submit-quiz, .reset-quiz {
+.submit-quiz,
+.reset-quiz {
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -701,22 +706,30 @@ nav a {
 }
 
 .source strong {
-  font-size: 1rem; /* Default inherited size */
+  font-size: 1rem;
 }
 
-p, ul, ol, li {
+.footer {
+  color: white;
+}
+
+p,
+ul,
+ol,
+li {
   font-family: Arial, sans-serif;
-  font-size: 1.1rem; /* Matches .reading-content p */
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: #1a237e; /* Matches text color */
+  color: #1a237e;
   margin-bottom: 1.5rem;
 }
 
-ul, ol {
-  padding-left: 1.5rem; /* Standard indent for lists */
-  list-style-position: outside; /* Standard bullet/number alignment */
+ul,
+ol {
+  padding-left: 1.5rem;
+  list-style-position: outside;
 }
 
 li {
-  margin-bottom: 0.5rem; /* Space between list items */
+  margin-bottom: 0.5rem;
 }
