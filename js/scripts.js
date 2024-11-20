@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const starWarsModeButton = document.getElementById("starWarsModeButton");
   const lightsaberOffSound = document.getElementById("lightsaberOffSound");
   const lightsaberOnSound = document.getElementById("lightsaberOnSound");
+ // Referanse til body-elementet
 
   // Load the saved theme when the page loads
   if (localStorage.getItem("theme") === "star-wars") {
@@ -12,19 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Uses localstorage to get the
   normalModeButton.addEventListener("click", () => {
+    // Sjekk om 'star-wars'-klassen er satt
     if (body.classList.contains("star-wars")) {
-      lightsaberOffSound.play();
-      localStorage.setItem("theme", "normal");
+      lightsaberOffSound.play(); // Spill av lyden for å slå av lyssabelen kun hvis i Star Wars-modus
     }
-    body.classList.remove("star-wars");
+    body.classList.remove("star-wars"); // Fjern klassen hvis den er der
   });
 
   starWarsModeButton.addEventListener("click", () => {
+    // Sjekk om 'star-wars'-klassen ikke er satt
     if (!body.classList.contains("star-wars")) {
-      lightsaberOnSound.play();
-      localStorage.setItem("theme", "star-wars");
+      lightsaberOnSound.play(); // Spill av lyden for å slå på lyssabelen kun hvis ikke i Star Wars-modus
     }
-    body.classList.add("star-wars");
+    body.classList.add("star-wars"); // Legg til klassen
   });
 });
 
@@ -34,7 +35,7 @@ function updatePreview() {
   const cssContent = document.getElementById("css-editor").value;
   const iframe = document.getElementById("preview");
 
-  // Combine HTML and CSS
+  // Kombiner HTML og CSS
   const combinedContent = `
     <html>
       <head>
@@ -46,7 +47,7 @@ function updatePreview() {
     </html>
   `;
 
-  // Update the iframe
+  // Oppdater iframe
   iframe.srcdoc = combinedContent;
 }
 
