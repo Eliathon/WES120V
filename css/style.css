@@ -1,4 +1,5 @@
-body {
+body,
+html {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -625,5 +626,26 @@ img {
     display: block;
     width: 100%;
     padding: 10px 0;
+  }
+
+  .star-wars .crawl {
+    animation: none; /* Stops the animation */
+    transform: none; /* Resets transformations */
+    position: static; /* Ensures content is part of the normal document flow */
+    height: auto; /* Ensures the container can expand as needed */
+    overflow: visible; /* Makes sure content can overflow if necessary */
+    font-size: 16px; /* Adjusts font size for readability */
+    line-height: 1.5; /* Adjusts line height for better text display */
+    text-align: center; /* Centers text */
+  }
+
+  .star-wars .content-container,
+  .star-wars .main-container {
+    overflow: visible; /* Ensures these containers do not restrict content */
+    position: relative;
+  }
+
+  .star-wars footer {
+    position: relative; /* Ensures footer flows naturally at the end of content */
   }
 }
